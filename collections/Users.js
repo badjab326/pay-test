@@ -5,11 +5,31 @@ const Users = {
     useAsTitle: 'email',
   },
   access: {
+    create: () => true,
     read: () => true,
+    update: () => true,
+    delete: () => true,
   },
   fields: [
-    // Email added by default
-    // Add more fields as needed
+    {
+      name: 'userInfo',
+      type: 'array',
+      fields: [
+        {
+          name: 'name',
+          type: 'text',
+        },
+        {
+          name: 'company',
+          type: 'text',
+        },
+        {
+          name: 'verified',
+          type: 'checkbox',
+          defaultValue: false,
+        }
+      ]
+    },
   ],
 };
 

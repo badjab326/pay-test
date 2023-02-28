@@ -24,6 +24,10 @@ const Todo = {
           type: 'text',
         },
         {
+          name: 'quantity',
+          type: 'number',
+        },
+        {
           name: 'complete',
           type: 'checkbox',
           defaultValue: false,
